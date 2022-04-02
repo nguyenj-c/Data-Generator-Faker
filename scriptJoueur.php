@@ -7,12 +7,12 @@ require_once 'vendor/autoload.php';
 $db = new DB();
 
 $faker = Faker\Factory::create();
-$nb = 100000;
+$nb = 1000000;
 
 for ($i = 0; $i < $nb - 1; $i++) {
-    $nom = htmlentities($faker->name());
-    $prenom =$faker->firstName();
-    $email =$faker->email();
+    $nom = htmlentities($faker->lastName());
+    $prenom = htmlentities($faker->firstName());
+    $email = $faker->email();
     $profilePicture = $faker->imageUrl(360, 360, 'animals', true, 'dogs', true);
     $website = $faker->url();
     $address = htmlentities($faker->address());
