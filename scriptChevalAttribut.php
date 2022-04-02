@@ -20,6 +20,6 @@ for ($i = 0; $i < $nb - 1; $i++) {
     $temperament = $faker->randomElement([0,1]);
 
     $db->execDB("INSERT INTO cheval_attribut ( resistance, endurance, detente, vitesse, sociabilite, intelligence, temperament )
-                               VALUES ('$resistance',$endurance,'de$detente','$vitesse','$sociabilite','$intelligence','$temperament')");
+                               VALUES ('$resistance','$endurance','$detente','$vitesse','$sociabilite','$intelligence','$temperament')");
 }
 echo 'FINISHED INSERTION DATA';
