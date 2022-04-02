@@ -17,6 +17,6 @@ for ($i = 0; $i < $nb - 1; $i++) {
     $blessures = $faker->randomElement([0,1]);
 
     $db->execDB("INSERT INTO proprete ( ID_cheval, maladies, parasites, blessures )
-                               VALUES ('$IDCheval',,'$maladies','$parasites','$blessures')");
+                               VALUES ('$IDCheval','$maladies','$parasites','$blessures')");
 }
 echo 'FINISHED INSERTION DATA';

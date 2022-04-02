@@ -10,12 +10,12 @@ $faker = Faker\Factory::create();
 $nb = 100000;
 
 for ($i = 0; $i < $nb - 1; $i++) {
-    $nom = $faker->name();
+    $nom = htmlentities($faker->name());
     $prenom =$faker->firstName();
     $email =$faker->email();
     $profilePicture = $faker->imageUrl(360, 360, 'animals', true, 'dogs', true);
     $website = $faker->url();
-    $address = $faker->address();
+    $address = htmlentities($faker->address());
     $phone = $faker->phoneNumber();
     $description = $faker->text(50);
     $ip = $faker->ipv4();

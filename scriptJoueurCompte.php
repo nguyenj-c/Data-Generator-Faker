@@ -18,9 +18,9 @@ for ($i = 0; $i < $nb - 1; $i++) {
     $IDItems = $faker->randomNumber();
     $IDTaches = $faker->randomNumber();
     $userame = $faker->userName();
-    $password = $faker->password(50);
-    $dateInscription = $faker->dateTime()->format(DATE_RFC3339_EXTENDED);
-    $lastConnexion = $faker->dateTime()->format(DATE_RFC3339_EXTENDED);
+    $password = $faker->md5();
+    $dateInscription = $faker->date('Y-m-d H:i:s');
+    $lastConnexion = $faker->date('Y-m-d H:i:s');
 
     $db->execDB("INSERT INTO joueur_compte ( ID_joueur, ID_centre, ID_chevaux, ID_club, ID_items, ID_taches, username, mdp, date_Inscription, last_connexion )
                                VALUES ('$IDJoueur','$IDCentre','$IDChevaux','$IDClub','$IDItems','$IDTaches','$userame','$password','$dateInscription','$lastConnexion')");
