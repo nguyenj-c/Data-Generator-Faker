@@ -8,10 +8,10 @@ $db = new DB();
 
 $faker = Faker\Factory::create();
 
-$nb = 100;
+$nb = 100000;
 
 for ($i = 0; $i < $nb - 1; $i++) {
-    $nom = $faker->name();
+    $nom = htmlentities($faker->firstName());
 
     $db->execDB("INSERT INTO famille_item ( nom )
                                VALUES ('$nom')");

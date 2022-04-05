@@ -4,7 +4,7 @@
 final class DB extends PDO
 {
 
-    private const DBHOST = '172.23.171.236';
+    private const DBHOST = '172.23.125.122';
     private const DBUSER = 'test';
     private const DBPASS = 'test';
     private const DBNAME = 'horse_sim';

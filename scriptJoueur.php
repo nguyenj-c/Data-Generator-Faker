@@ -7,6 +7,7 @@ require_once 'vendor/autoload.php';
 $db = new DB();
 
 $faker = Faker\Factory::create();
+
 $nb = 1000000;
 
 for ($i = 0; $i < $nb - 1; $i++) {

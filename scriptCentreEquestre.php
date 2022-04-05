@@ -8,7 +8,7 @@ $db = new DB();
 
 $faker = Faker\Factory::create();
 
-$nb = 100;
+$nb = 100000;
 
 $description = $faker->text(50);
 
